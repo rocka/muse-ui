@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Breadcrumbs Items should default view 1`] = `
-
 <ul class="mu-breadcrumbs">
   <li class="mu-breadcrumbs-item">
     <a>
@@ -12,5 +11,4 @@ exports[`Breadcrumbs Items should default view 1`] = `
     </a>
   </li>
 </ul>
-
 `;

@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Bottom Navigation should default view 1`] = `
-
 <div tabindex="0"
      class="mu-bottom-nav"
 >
@@ -56,11 +55,9 @@ exports[`Bottom Navigation should default view 1`] = `
     </div>
   </div>
 </div>
-
 `;
 
 exports[`Bottom Navigation should shift mode 1`] = `
-
 <div tabindex="0"
      class="mu-bottom-nav mu-bottom-nav-shift "
 >
@@ -111,5 +108,4 @@ exports[`Bottom Navigation should shift mode 1`] = `
     </div>
   </div>
 </div>
-
 `;

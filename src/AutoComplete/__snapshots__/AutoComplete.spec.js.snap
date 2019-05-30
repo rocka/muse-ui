@@ -1,7 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AutoComplete should default view 1`] = `
-
 <div class="mu-input ">
   <div class="mu-text-field mu-input-content">
     <input tabindex="0"
@@ -23,5 +22,4 @@ exports[`AutoComplete should default view 1`] = `
     </div>
   </div>
 </div>
-
 `;
