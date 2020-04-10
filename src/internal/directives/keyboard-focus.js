@@ -47,5 +47,6 @@ export default {
   },
   unbind (el) {
     el.removeEventListener('focus', el[keyboardcontext].handleFocus);
+    delete el[keyboardcontext];
   }
 };

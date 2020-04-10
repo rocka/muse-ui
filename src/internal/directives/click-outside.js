@@ -28,5 +28,6 @@ export default {
 
   unbind (el) {
     document.removeEventListener('click', el[clickoutsideContext].documentHandler);
+    delete el[clickoutsideContext];
   }
 };

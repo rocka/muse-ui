@@ -31,6 +31,7 @@ function unbind (el, binding) {
   const { callback, options, target } = el._onScroll;
   if (!target) return;
   target.removeEventListener('scroll', callback, options);
+  delete el._onScroll;
 }
 export default {
   name: 'scroll',

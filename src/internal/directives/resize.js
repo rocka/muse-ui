@@ -24,5 +24,6 @@ export default {
   },
   unbind (el, binding) {
     window.removeEventListener('resize', el._onResize);
+    delete el._onResize;
   }
 };
