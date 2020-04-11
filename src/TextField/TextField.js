@@ -32,6 +32,14 @@ export default {
         this.$refs.textarea.$refs.textarea.focus();
       }
     },
+    blur () {
+      if (this.disabled) return;
+      if (this.$refs.input) {
+        this.$refs.input.blur();
+      } else if (this.$refs.textarea) {
+        this.$refs.textarea.$refs.textarea.blur();
+      }
+    },
     createTextField (h) {
       const listeners = {
         ...this.$listeners,
