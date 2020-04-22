@@ -4,18 +4,11 @@ export { default as ExpandTransition } from './ExpandTransition';
 function createTransition (name, mode) {
   return {
     name,
-    functional: true,
-    render (h, context) {
-      context.data = context.data || {};
-      context.data.props = { name, appear: true };
-      context.data.on = context.data.on || {};
-      if (!Object.isExtensible(context.data.on)) {
-        context.data.on = { ...context.data.on };
-      }
-
-      if (mode) context.data.props.mode = mode;
-
-      return h('transition', context.data, context.children);
+    render (h) {
+      return h('transition', {
+        props: { name, appear: true, ...this.$attrs },
+        on: this.$listeners
+      }, this.$slots.default);
     }
   };
 }
