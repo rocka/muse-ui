@@ -14,18 +14,14 @@ function listenForTabPresses () {
 const keyboardcontext = '@@keyboardcontext';
 export default {
   name: 'keyboard-focus',
-  bind (el, binding, vnode) {
+  bind (el, binding) {
     listenForTabPresses();
     let timer;
     const handleFocus = (e) => {
       if (timer) clearTimeout(timer);
       timer = setTimeout(() => {
         if (tabPressed) {
-          if (binding.expression) {
-            vnode.context[el[keyboardcontext].methodName](e);
-          } else {
-            el[keyboardcontext].bindingFn(e);
-          }
+          el[keyboardcontext].bindingFn(e);
           tabPressed = false;
         }
       }, 150);
@@ -33,7 +29,6 @@ export default {
 
     el[keyboardcontext] = {
       handleFocus,
-      methodName: binding.expression,
       bindingFn: binding.value
     };
     el.addEventListener('focus', handleFocus);

@@ -6,7 +6,7 @@ function getElevationClass (depth) {
 }
 export default {
   name: 'elevation',
-  inserted (el, { value }, vnode) {
+  inserted (el, { value }) {
     addClass(el, getElevationClass(value));
   },
   update (el, { value, oldValue }) {
