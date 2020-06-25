@@ -103,10 +103,11 @@ const PopupManager = {
   },
 
   handleOverlayClick () {
-    if (this.instances.length === 0) return;
-    const instance = this.instances[this.instances.length - 1];
-    if (instance.overlayClick) {
+    for (let i = this.instances.length - 1; i >= 0; i--) {
+      const instance = this.instances[i];
+      if (!instance.overlay || !instance.overlayClick) continue;
       instance.overlayClick();
+      return;
     }
   }
 };
