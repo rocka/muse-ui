@@ -105,8 +105,8 @@ export default {
         } else if (value < min) {
           value = min;
         }
+        this.$emit('change', value);
       }
-      this.$emit('change', value);
     },
     handleMouseDown (e) {
       if (this.disabled) return;
